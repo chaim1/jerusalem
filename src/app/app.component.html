@@ -1,0 +1,31 @@
+<div class="div_form">
+<form [formGroup]="searchForm" class="div_search">
+  <label for="search">חיפוש:&emsp;
+  </label>
+  <input class="inputSearch" formControlName="searchInput" type="text" placeholder="הקלד באן...">
+</form>
+</div>
+
+<div class="div_buttom">
+  <a (click)="allCars()" class="buttom">הכל</a>
+  <span> |</span>
+  <a (click)="selected(true)" class="buttom">נבחרו</a>
+  <span> |</span>
+  <a (click)="selected(false)" class="buttom">לא נבחרו</a>
+</div> 
+
+<div class="div_selected_info">
+  <p>רשימת כרטיסים שנבחרו: 
+  <span *ngFor="let item of seletedCard">
+    <ng-container *ngIf="item">
+    {{ item }}
+    </ng-container>
+  </span>
+</p>
+</div>
+
+<div class="wrapper_item" >
+  <ng-container *ngFor="let item of listOfCardsNumVis">
+    <div [ngClass]="{'backgroundSelected': listOfCards[item]}" (click)="selectItem(item)"  class="item"><p class="item_text">{{item}}</p></div>
+  </ng-container>
+</div>

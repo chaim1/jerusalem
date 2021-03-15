@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+.div_form{
+    text-align: center;
+}
+.div{
+    &_search{
+        direction: rtl;
+    }
+}
+.div_buttom{
+    direction: rtl;
+    text-align: center;
+    margin-top: 20px;
+}
+.buttom{
+    margin: 0 20px;
+}
+.wrapper_item{
+    width: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;}
+.item{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    flex: 1 0 18%;
+    &_text{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.backgroundSelected{
+    background-color: burlywood;
+}
+
+.div_selected_info{
+    direction: rtl;
+}
+
+.inputSearch{
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
